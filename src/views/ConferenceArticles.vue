@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import ConferenceNavBar from '@/components/ConferenceNavBar.vue'
+import ConferenceNavBar from '@/components/NavBar/ConferenceNavBar.vue'
 
 export default {
     components:{

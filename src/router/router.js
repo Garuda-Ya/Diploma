@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory, createMemoryHistory } from "vue-router"
+
 import Authorisation from "@/views/Authorisation.vue";
+import Registration from "@/views/Registration.vue";
 import ConferenceArticles from "@/views/ConferenceArticles.vue";
 import About from "@/views/About.vue";
 const routes = [
@@ -9,9 +11,14 @@ const routes = [
         component: ConferenceArticles
     },
     {
-        path:'/auth',
+        path:'/authorisation',
         name: 'auth',
         component: Authorisation
+    },
+    {
+        path:'/registration',
+        name: 'registration',
+        component: Registration
     },
     {
         path:'/about',

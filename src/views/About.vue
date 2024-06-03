@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import ConferenceNavBar from '@/components/ConferenceNavBar.vue'
+import ConferenceNavBar from '@/components/NavBar/ConferenceNavBar.vue'
 
 export default {
     components:{
@@ -16,6 +16,6 @@ export default {
 <style scoped>
 h1{
     color:black;
-    background-color: green;
+    background-color: rgb(135, 190, 135);
 }
 </style>

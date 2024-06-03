@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Header from '@/components/common/Header.vue'
-import Footer from '@/components/common/Footer.vue'
+import Header from '@/components/Header/Header.vue'
+import Footer from '@/components/Footer/Footer.vue'
 
 export default {
     components:{
@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .content{
-    min-height: 860px;
+    min-height: 89vh;
     max-width: 1600px;
     display: flex;
     flex-direction: column;
