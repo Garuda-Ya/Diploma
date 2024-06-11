@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import ConferenceNavBar from '@/components/NavBar/ConferenceNavBar.vue'
+import ConferenceNavBar from '@/components/NavBar/BaseNavBar.vue';
 
 export default {
     components:{

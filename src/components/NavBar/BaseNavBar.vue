@@ -1,19 +1,19 @@
 <template>
-    <nav className = 'navbar'>
-        <router-link to="/about">
-            <div className = "navbar-first-item"><button>Конференция</button></div>
+    <nav class = 'navbar'>
+        <router-link to="/conference">
+            <div class = "navbar-first-item"><button>Конференция</button></div>
         </router-link>
         <router-link to="/">
-            <div className = "navbar-item"><button>Рецензии</button></div>
+            <div class = "navbar-item"><button>Рецензии</button></div>
+        </router-link>
+        <router-link to="/about">
+            <div class = "navbar-item"><button>Cтатьи</button></div>
+        </router-link>
+        <router-link to="/about">
+            <div class = "navbar-item"><button>Комиссия</button></div>
         </router-link>
         <router-link to="/">
-            <div className = "navbar-item"><button>Cтатьи</button></div>
-        </router-link>
-        <router-link to="/about">
-            <div className = "navbar-item"><button>Комиссия</button></div>
-        </router-link>
-        <router-link to="/about">
-            <div className = "navbar-item"><button>Настройки</button></div>
+            <div class = "navbar-item"><button>Настройки</button></div>
         </router-link>
     </nav>
 </template>
@@ -42,24 +42,19 @@ export default {
 
     border: 1px solid black;
     border-radius: 5px;
-    box-shadow: 2px 2px 4px gray;
+    box-shadow: 1px 2px 4px rgb(142, 142, 142);
 }
 .navbar-item{
     height: 50px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 button{
     height:40px;
     border: none;
     background-color: antiquewhite;
     padding: 0 8px;
-}
-.navbar-item:hover{
-    background-color: azure;
-}
-.navbar-first-item:hover{
-    background-color: azure;
 }
 .navbar-item:before{
     content: '';

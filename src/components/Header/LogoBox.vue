@@ -1,6 +1,6 @@
 <template>
-    <router-link to="/about">
-        <a className = "logo-box" href="#">
+    <router-link to="/">
+        <a class = "logo-box" href="#">
             <img src="@/assets/images/52.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             <p>НаучКонф</p>
         </a>

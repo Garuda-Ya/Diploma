@@ -1,9 +1,11 @@
 <template>
+<div class = "asd">
     <Header/>
-    <div className = "content">
+    <div class = "content">
         <router-view></router-view>
     </div>
     <Footer/>
+</div>
 </template>
 
 <script>
@@ -20,11 +22,18 @@ export default {
 </script>
 
 <style scoped>
-.content{
-    min-height: 89vh;
-    max-width: 1600px;
+.asd{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    height:100vh;
+}
+.content{
+    display: flex;
+    flex-grow:1;
+    flex-direction: column;
+
+    align-self: center;
+    max-width: 1200px;
+    width: 100%;
 }
 </style>

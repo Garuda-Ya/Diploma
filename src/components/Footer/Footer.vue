@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div className = "text-bottom">Copyright © 2024 – 2024  AI-Conf</div>
+        <div class = "text-bottom">Copyright © 2024 – 2024  AI-Conf</div>
     </footer>
 </template> 
 
@@ -12,12 +12,14 @@ export default {
 
 <style scoped>
 footer{
-    margin-top:20px;
-    display:flex;
     height: 36px;
     width: 100vw;
-    background-color: #F3F3F3;
+    margin-top:20px;
+
+    display:flex;
     justify-content: center;
     align-items: center; 
+
+    background-color: #F3F3F3;
 }
 </style>
