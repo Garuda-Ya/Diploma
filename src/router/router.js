@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory, createMemoryHistory } from "vue-router"
 
-import Authorisation from "@/views/Authorisation.vue";
-import Registration from "@/views/Registration.vue";
-import ConferenceArticles from "@/views/ConferenceArticles.vue";
+import Authorisation from "@/views/RegAndAuth/Authorisation.vue";
+import Registration from "@/views/RegAndAuth/Registration.vue";
+import ConferenceArticles from "@/views/Articles/ConferenceArticles.vue";
 import About from "@/views/About.vue";
-import SingleArticle from "@/views/SingleArticle.vue";
+import SingleArticle from "@/views/Articles/SingleArticle.vue";
 import MainPage from "@/views/Conference/MainPage.vue";
 import PageNotFound from "@/views/PageNotFound.vue";
+import Profile from "@/views/Profile.vue";
+import Particapants from "@/views/Particapants.vue";
 const routes = [
     {
         path:'/',
@@ -37,6 +39,16 @@ const routes = [
         path:`/articles/:id`,
         name: 'single-article',
         component: SingleArticle
+    },
+    {
+        path:`/profile`,
+        name: 'user-profile',
+        component: Profile
+    },
+    {
+        path:`/particapants`,
+        name: 'particapants',
+        component: Particapants
     },
     /*
     { 

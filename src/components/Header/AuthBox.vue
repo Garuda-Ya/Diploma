@@ -1,7 +1,9 @@
 <template>
     <div class="auth-box" v-if="$store.state.isAuthorised==true">
-        <router-link to="/"><a class = "auth-btn" href="#">Выйти</a></router-link>
-        <router-link to="/"><a class = "registr-btn" href="#">Регистрация</a></router-link>
+        <router-link to="/">
+            <a class = "auth-btn" href="#" @click="loginTo">Выйти</a>
+        </router-link>
+        <router-link to="/profile"><a class = "registr-btn" href="#">Профиль</a></router-link>
     </div>
     <div class = "auth-box" v-else>    
         <router-link to="/auth"><a class = "auth-btn" href="#">Авторизация</a></router-link>
@@ -11,7 +13,12 @@
 
 <script>
 export default {
-
+    methods:{
+        loginTo(){
+            this.$store.commit('logout');
+            $router.push('/about')
+        }
+    }
 }
 </script>
 

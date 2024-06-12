@@ -1,6 +1,6 @@
 <template>
     <div class = "auth-buttons">
-        <button v-on:click="request()">Войти</button>
+        <button type='button' v-on:click="loginTo">Войти</button>
         <router-link to="/reg">
             <a href="">Нет аккаунта? Зарегистрируйтесь!</a>
         </router-link>
@@ -14,8 +14,9 @@ export default {
         password: String,
     },
     methods:{
-        request(){
-            alert("This is your login:" + this.login + "\nThis is your password:" + this.password);
+        loginTo(){
+            this.$store.commit('login');
+            this.$router.push('/')
         }
     }
 }

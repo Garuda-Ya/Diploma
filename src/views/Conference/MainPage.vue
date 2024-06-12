@@ -4,7 +4,7 @@
     <div class="group-container">
         <div class="first-row">
             <div class="group">
-                <h2>Статьи</h2>
+                <label>Статьи</label>
                 <ul>
                     <li><a href="">Все статьи</a></li>
                     <li><a href="">Проверенные</a></li>
@@ -12,7 +12,7 @@
                 </ul>
             </div>
             <div class="group">
-                <h2>Рецензии</h2>
+                <label>Рецензии</label>
                 <ul>
                     <li><a href="">Все рецензии</a></li>
                     <li><a href="">Проверенные</a></li>
@@ -23,7 +23,7 @@
         </div>
         <div class="second-row">
             <div class="group right-element">
-            <h2>Состав</h2>
+            <label>Состав</label>
             <ul>
                 <li><a href="">Участники конференции</a></li>
                 <li><a href="">Участники приемной комиссии</a></li>
@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="group right-element">
-            <h2>Настройки</h2>
+            <label>Настройки</label>
             <ul>
                 <li><a href="">Настройки конференции</a></li>
                 <li><a href="">Настройки рецензий</a></li>
@@ -71,28 +71,39 @@ export default {
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
 }
+.group:hover{
+    transition: 200ms ease-in-out;
+    box-shadow: 6px 6px 8px 0px rgba(34, 60, 80, 0.2);
+}
 .right-element{
     margin-left: 200px;
 }
 h1{
-    margin:35px 0;
+    margin: 25px 0 25px 6px;
+    
+    text-align: left;
 }
-h2{
+label{
     padding-bottom: 4px;
     margin-bottom: 10px;
+
+    font-size: 17pt;
 }
-h2:after{
+label:after{
     content:'';
-    display: block;
+
     position: absolute;
     width:165px;
+
+    display: block;
+
     border-bottom: 3px solid gray;
 }
 ul{
     padding-left:16px;
 }
 li{
-    padding-top:10px;
+    padding-top:12px;
     list-style-type: circle;
 }
 </style>

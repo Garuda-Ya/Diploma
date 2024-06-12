@@ -9,15 +9,22 @@
         <router-link to="/about">
             <div class = "navbar-item"><button>Cтатьи</button></div>
         </router-link>
-        <router-link to="/about">
-            <div class = "navbar-item"><button>Комиссия</button></div>
+        <router-link to="/particapants">
+            <div class = "navbar-item"><button>Участники</button></div>
         </router-link>
-        <router-link to="/">
-            <div class = "navbar-item"><button>Настройки</button></div>
-        </router-link>
+        <div class = "navbar-item">
+            <router-link to="/about">
+                <button>Справка</button>
+            </router-link>
+        </div>
+        <div class = "navbar-item" v-if="$store.state.isAuthorised==true">
+            <router-link to="/profile">
+                <button>Личный кабинет</button>
+            </router-link>
+        </div>
+        
     </nav>
 </template>
-
 <script>
 
 export default {
@@ -45,16 +52,17 @@ export default {
     box-shadow: 1px 2px 4px rgb(142, 142, 142);
 }
 .navbar-item{
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor: default;
 }
 button{
     height:40px;
     border: none;
     background-color: antiquewhite;
-    padding: 0 8px;
+    padding: 0 10px;
+    cursor: pointer;
 }
 .navbar-item:before{
     content: '';
@@ -65,6 +73,5 @@ button{
 button:hover{
     transform: translateY(-2px);
     background-color: azure;
-    cursor: pointer;
 }
 </style>
