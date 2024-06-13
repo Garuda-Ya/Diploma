@@ -1,14 +1,19 @@
 import { createRouter, createWebHistory, createMemoryHistory } from "vue-router"
 
+//#region  Components import
 import Authorisation from "@/views/RegAndAuth/Authorisation.vue";
-import Registration from "@/views/RegAndAuth/Registration.vue";
-import ConferenceArticles from "@/views/Articles/ConferenceArticles.vue";
 import About from "@/views/About.vue";
-import SingleArticle from "@/views/Articles/SingleArticle.vue";
+import ConferenceArticles from "@/views/Articles/ConferenceArticles.vue";
+import FAQ from "@/views/FAQ.vue";
 import MainPage from "@/views/Conference/MainPage.vue";
-import PageNotFound from "@/views/PageNotFound.vue";
-import Profile from "@/views/Profile.vue";
 import Particapants from "@/views/Particapants.vue";
+import Profile from "@/views/Profile.vue";
+import Registration from "@/views/RegAndAuth/Registration.vue";
+import Reviews from "@/views/Reviews.vue";
+import SingleArticle from "@/views/Articles/SingleArticle.vue";
+//#endregion
+import PageNotFound from "@/views/PageNotFound.vue";
+
 const routes = [
     {
         path:'/',
@@ -26,7 +31,7 @@ const routes = [
         component: Registration
     },
     {
-        path:'/about',
+        path:'/articles',
         name: 'articles',
         component: ConferenceArticles
     },
@@ -50,11 +55,21 @@ const routes = [
         name: 'particapants',
         component: Particapants
     },
+    {
+        path:`/faq`,
+        name: 'faq',
+        component: FAQ,
+    },
+    {
+        path:`/reviews`,
+        name: 'reviews',
+        component: Reviews,
+    },
     /*
     { 
         path: '/404', 
         name: 'pageNotFound',
-        component: PageNotFound 
+        component: PageNotFound  
     },
     { 
         path: "/:catchAll(.*)",

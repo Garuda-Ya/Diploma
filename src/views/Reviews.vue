@@ -1,5 +1,5 @@
 <template>
-    <h1>Присланные статьи</h1>
+    <h1>Рецензии</h1>
     <ArticlesTableTools/>
     <div class="big-table">
         <table>
@@ -10,7 +10,7 @@
                 <th>Тема</th>
                 <th>О статье</th>
             </tr> 
-            <tr v-for="article in articles" :article = "article" :key = "article.id">
+            <tr v-for="article in articles" :article = "article" :key = "article.id"> <!--ряд с ячейками тела таблицы-->
                 <td>{{article.id}}</td>
                 <td>{{article.authors.toString()}}</td>
                 <td>{{article.title}}</td>
@@ -21,7 +21,7 @@
                         Просмотр
                     </button>
                 </td>
-            </tr> <!--ряд с ячейками тела таблицы-->
+            </tr> 
         </table>
     </div>
 </template>

@@ -6,15 +6,15 @@
         </div>
         <div class="password field-container">
             <p>Пароль</p>
-            <input type="text" placeholder="Введите пароль">
+            <input type="password" placeholder="Введите пароль">
         </div>
         <div class="password field-container">
             <p>Повторите пароль</p>
-            <input type="text" placeholder="Введите пароль">
+            <input type="password" placeholder="Введите пароль">
         </div>
         <div class="password field-container">
             <p>Электронная почта</p>
-            <input type="text" placeholder="Введите почту">
+            <input type="email" placeholder="Введите почту">
         </div>
     </div>
 </template>

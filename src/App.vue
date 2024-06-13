@@ -1,7 +1,8 @@
 <template>
-<div class = "asd">
+<div class = "wrapper">
     <Header/>
     <div class = "content">
+        <ConferenceNavBar/>
         <router-view></router-view>
     </div>
     <Footer/>
@@ -11,18 +12,20 @@
 <script>
 import Header from '@/components/Header/Header.vue'
 import Footer from '@/components/Footer/Footer.vue'
+import ConferenceNavBar from '@/components/NavBar/BaseNavBar.vue'
 
 export default {
     components:{
         Header,
         Footer,
+        ConferenceNavBar,
     },
 
 }
 </script>
 
 <style scoped>
-.asd{
+.wrapper{
     display: flex;
     flex-direction: column;
     height:100vh;

@@ -1,5 +1,4 @@
 <template>
-    <ConferenceNavBar/>
     <h1>Научная конференция 2024</h1>
     <div class="group-container">
         <div class="first-row">
@@ -17,7 +16,7 @@
                     <li><a href="">Все рецензии</a></li>
                     <li><a href="">Проверенные</a></li>
                     <li><a href="">Назначенные</a></li>
-                    <li><a href="">Не назначенные</a></li>
+                    <li><a href="">Неназначенные</a></li>
                 </ul>
             </div>
         </div>
@@ -35,6 +34,7 @@
             <ul>
                 <li><a href="">Настройки конференции</a></li>
                 <li><a href="">Настройки рецензий</a></li>
+                <li><a href="">О конференции</a></li>
             </ul>
         </div>
         </div>
@@ -42,16 +42,14 @@
 </template>
 
 <script>
-import ConferenceNavBar from '@/components/NavBar/BaseNavBar.vue';
 
 export default {
     components:{
-        ConferenceNavBar,
     },
 }
 </script>
 
-<style>
+<style scoped>
 .group-container{
     padding-bottom: 180px;
 

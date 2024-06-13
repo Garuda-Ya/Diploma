@@ -12,7 +12,7 @@
         <div class="password field-container">
             <p>Пароль</p>
             <input
-                type="text" 
+                type="password" 
                 placeholder="Введите пароль"
                 :value="password"
                 @input="$emit('update:password',$event.target.value)"

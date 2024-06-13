@@ -1,19 +1,19 @@
 <template>
-    <nav class = 'navbar'>
+    <nav class = 'navbar' v-if = "$route.name != 'registration'&& $route.name != 'authorisation'">
         <router-link to="/conference">
             <div class = "navbar-first-item"><button>Конференция</button></div>
         </router-link>
-        <router-link to="/">
+        <router-link to="/reviews">
             <div class = "navbar-item"><button>Рецензии</button></div>
         </router-link>
-        <router-link to="/about">
+        <router-link to="/articles">
             <div class = "navbar-item"><button>Cтатьи</button></div>
         </router-link>
         <router-link to="/particapants">
             <div class = "navbar-item"><button>Участники</button></div>
         </router-link>
         <div class = "navbar-item">
-            <router-link to="/about">
+            <router-link to="/faq">
                 <button>Справка</button>
             </router-link>
         </div>
