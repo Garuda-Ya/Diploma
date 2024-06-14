@@ -81,7 +81,8 @@ h2{
 }
 p{
     padding: 0 20px;
-
+    
+    font-style: italic;
     font-size: 20px;
     text-indent: 30px;
 }

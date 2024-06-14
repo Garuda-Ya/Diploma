@@ -6,7 +6,7 @@
     <div class="big-table">
         <table>
             <tr> <!--ряд с ячейками заголовков-->
-                <th @click="sortBy('id') ">#123</th>
+                <th @click="sortBy('id') ">#</th>
                 <th @click="sortBy('lastName') ">Имя</th>
                 <th @click="sortBy('email') ">E-mail</th>
                 <th @click="sortBy('affilation') ">Принадлежность</th>

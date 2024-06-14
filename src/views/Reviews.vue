@@ -8,6 +8,7 @@
                 <th>Автор</th>
                 <th>Название</th>
                 <th>Тема</th>
+                <th>Статус</th>
                 <th>О статье</th>
             </tr> 
             <tr v-for="article in articles" :article = "article" :key = "article.id"> <!--ряд с ячейками тела таблицы-->
@@ -15,6 +16,7 @@
                 <td>{{article.authors.toString()}}</td>
                 <td>{{article.title}}</td>
                 <td>{{article.topics.toString()}}</td>
+                <td> </td>
                 <td>
                     <button
                         @click="$router.push(`/articles/${article.id}`)">
