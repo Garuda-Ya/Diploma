@@ -17,8 +17,12 @@
                 <button>Справка</button>
             </router-link>
         </div>
-        <div class = "navbar-item" v-if="$store.state.isAuthorised==true">
-            <router-link to="/profile">
+        <div class = "navbar-item" v-if="$store.state.isAuth==true">
+            <router-link 
+                :to="{  
+                    name: 'profile',
+                    params: {id:this.$store.getters.getCurrentUserID}
+                }">
                 <button>Личный кабинет</button>
             </router-link>
         </div>

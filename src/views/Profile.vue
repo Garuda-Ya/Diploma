@@ -1,5 +1,5 @@
 <template>
-    <h1>Это вы!</h1>
+    <h1>Это вы! User = {{ this.id }}</h1>
 </template>
 
 <script>
@@ -7,6 +7,9 @@
 export default {
     components:{
     },
+    props:{
+        id: String,
+    }
 }
 </script>
 

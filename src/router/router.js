@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, createMemoryHistory } from "vue-router"
 
-//#region  Components import
+//#region  Components 
 import Authorisation from "@/views/RegAndAuth/Authorisation.vue";
 import About from "@/views/About.vue";
 import ConferenceArticles from "@/views/Articles/ConferenceArticles.vue";
@@ -43,12 +43,14 @@ const routes = [
     {
         path:`/articles/:id`,
         name: 'single-article',
-        component: SingleArticle
+        component: SingleArticle,
+        props: true,
     },
     {
-        path:`/profile`,
-        name: 'user-profile',
-        component: Profile
+        path:`/profile/:id`,
+        name: 'profile',
+        component: Profile,
+        props: true,
     },
     {
         path:`/particapants`,

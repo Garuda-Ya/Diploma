@@ -15,8 +15,19 @@ export default {
     },
     methods:{
         loginTo(){
-            this.$store.commit('login');
-            this.$router.push('/')
+            /*axios.get('/localhost:8000/getUser/login',
+            {
+                params: {
+                login: this.login,
+                password: this.password,
+                }
+            }).then{
+                userID = result
+            }
+            */
+            var userID = 1
+            this.$store.commit('login',userID);
+            this.$router.push(`/profile/${userID}`);
         }
     }
 }
