@@ -11,5 +11,9 @@ export default {
 </script>
 
 <style scoped>
-
+h1{
+    margin: 25px 0 25px 6px;
+    
+    text-align: left;
+}
 </style>

@@ -1,5 +1,34 @@
 <template>
-    <h1>Присланные статьи</h1>
+    <span v-if="this.$store.getters.getCurrentUserRole == 1">
+        <h1>Ваши доклады</h1>
+        <button class="button-send">Добавить доклад</button>
+        <div class="big-table">
+        <table>
+            <tr> <!--ряд с ячейками заголовков-->
+                <th>#</th>
+                <th>Название</th>
+                <th>Тема</th>
+                <th>Статус</th>
+                <th>О докладе</th>
+            </tr> 
+            <tr v-for="article in authorArticles" :article = "article" :key = "article.id">
+                <td>{{article.id}}</td>
+                <td>{{article.title}}</td>
+                <td>{{article.topics.toString()}}</td>
+                <td>{{article.status}}</td>
+                <td>
+                    <button
+                        @click="$router.push(`/articles/${article.id}`)">
+                        Просмотр
+                    </button>
+                </td>
+            </tr> <!--ряд с ячейками тела таблицы-->
+        </table>
+    </div>
+    </span>
+
+    <span v-else-if="true">
+    <h1>Присланные доклады</h1>
     <ArticlesTableTools/>
     <div class="big-table">
         <table>
@@ -8,7 +37,7 @@
                 <th>Автор</th>
                 <th>Название</th>
                 <th>Тема</th>
-                <th>О статье</th>
+                <th>О докладе</th>
             </tr> 
             <tr v-for="article in articles" :article = "article" :key = "article.id">
                 <td>{{article.id}}</td>
@@ -24,6 +53,8 @@
             </tr> <!--ряд с ячейками тела таблицы-->
         </table>
     </div>
+
+    </span>
 </template>
 
 <script>
@@ -34,41 +65,17 @@ export default {
     },
     data(){
         return{
-            articles:[
-                {
-                    id:1,authors:['Irina', 'Evgeny'],
-                    title:"Digital Earth: current trends",
-                    topics:"Research"
-                },
-                {
-                    id:2,authors:['Evgeny'],
-                    title:"Digital Style: current trends",
-                    topics:"Research"},
-                {
-                    id:3,
-                    authors:['Dmitriy','Nastya','Denis'],
-                    title:"Current trends of Agroculture",
-                    topics:"Research"},
-                {
-                    id:4,
-                    authors:['Dmitriy'],
-                    title:"Importance of importance",
-                    topics:"Research"},
-                {
-                    id:5,
-                    authors:['Denis'],
-                    title:"How we managed to cope with hope",
-                    topics:"Abstract"
-                },
-                {
-                    id:6,
-                    authors:['Nastya'],
-                    title:"Real problems of ecolife",
-                    topics:"Abstract"
-                },
-            ]
+            
         }
     },
+    computed:{
+        articles(){
+            return this.$store.getters.getArticles;
+        },
+        authorArticles(){
+            return[...this.articles].filter(article => article.id%4==0);
+        }
+    }
 }
 </script>
 
@@ -127,5 +134,9 @@ td {
     /**Расширение таблицы*/
     width: 1%;
     white-space: nowrap;
+}
+.button-send{
+    width:300px;
+    height:40px;
 }
 </style>

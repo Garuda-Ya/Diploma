@@ -1,5 +1,5 @@
 <template>
-    <h1>Это вы! User = {{ this.id }}</h1>
+    <h1>Это вы! User = {{ this.id }} и ваша роль {{ this.$store.getters.getCurrentUserRole }}</h1>
 </template>
 
 <script>

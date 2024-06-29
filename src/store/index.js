@@ -270,6 +270,55 @@ export default createStore({
                 wasInvitedBy: '21'
             },
         ],
+        articles:[
+            {
+                id:1,authors:['Irina', 'Evgeny'],
+                title:"Digital Earth: current trends",
+                topics:"Research",
+                status:"В проверке"
+            },
+            {
+                id:2,authors:['Maxim'],
+                title:"Digital Style: current trends",
+                topics:"Research",
+                status:"В проверке"
+            },
+            {
+                id:3,
+                authors:['Dmitriy','Nastya','Denis'],
+                title:"Current trends of Agroculture",
+                topics:"Research",
+                status:"В проверке"
+            },
+            {
+                id:4,
+                authors:['Dmitriy'],
+                title:"Importance of importance",
+                topics:"Research",
+                status:"Отклонено"
+            },
+            {
+                id:5,
+                authors:['Denis'],
+                title:"How we managed to cope with hope",
+                topics:"Abstract",
+                status:"В проверке"
+            },
+            {
+                id:6,
+                authors:['Nastya'],
+                title:"Real problems of ecolife",
+                topics:"Abstract",
+                status:"Принято"
+            },
+            {
+                id:7,
+                authors:['Andrew'],
+                title:"Real problems of ecolife",
+                topics:"Abstract",
+                status:"Принято"
+            },
+        ],
         currentUserID: "",
         currentConfID: "",
     },
@@ -280,17 +329,25 @@ export default createStore({
         getCurrentUserID(state){
             return state.currentUserID;
         },
+        getCurrentUserRole(state){
+            return state.role;
+        },
+        getArticles(state){
+            return state.articles;
+        }
     },
     mutations: {
-        login(state, id){
+        login(state, payload){
             this.state.isAuth = true;
-            this.state.currentUserID = id;
+            this.state.currentUserID = payload.id;
+            this.state.role = payload.role;
         },
         logout(state){
             this.state.isAuth = false;
             this.state.currentUserID = "";
             this.state.currentConfID = "";
-        }
+            this.state.role = 0;
+        },
     },
     modules:{
 

@@ -6,13 +6,34 @@
     <div class="big-table">
         <table>
             <tr> <!--ряд с ячейками заголовков-->
-                <th @click="sortBy('id') ">#</th>
-                <th @click="sortBy('lastName') ">Имя</th>
-                <th @click="sortBy('email') ">E-mail</th>
-                <th @click="sortBy('affilation') ">Принадлежность</th>
-                <th @click="sortBy('role') ">Роль</th>
-                <th @click="sortBy('lastSeen') ">Был в сети</th>
-                <th @click="sortBy('wasInvitedBy') ">Был приглашен</th>
+                <th @click="sortBy('id') " class="unselectable">
+                    <label>#</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='id'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
+                <th @click="sortBy('lastName') " class="unselectable">
+                    <label for="">Имя</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='lastName'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
+                <th @click="sortBy('email') " class="unselectable">
+                    <label for="">E-mail</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='email'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
+                <th @click="sortBy('affilation') " class="unselectable">
+                    <label>Принадлежность</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='affilation'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
+                <th @click="sortBy('role') " class="unselectable">
+                    <label>Роль</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='role'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
+                <th @click="sortBy('lastSeen') " class="unselectable">
+                    <label>Был в сети</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='lastSeen'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
+                <th @click="sortBy('wasInvitedBy') " class="unselectable">
+                    <label>Был приглашен</label> 
+                    <img src="/src/assets/images/triangle.png" alt="" v-show="sortOption=='wasInvitedBy'" :class="{ upsidedown: sortOrder==1 }">
+                </th>
             </tr> 
             <tr class="emptyFiller" v-if="sortedAndSearchedParticapants.length==0">
                 <td></td><td></td> <td></td><td></td><td></td><td></td><td></td>
@@ -22,7 +43,14 @@
                 <td>{{`${particapant.lastName} ${particapant.firstName.substring(0,1)} ${particapant.middleName.substring(0,1)}`}}</td>
                 <td>{{particapant.email}}</td>
                 <td>{{particapant.affilation}}</td>
-                <td>{{changeRole(particapant.role)}}</td>
+                <td>
+                    <select name="roles" id="roles-select" :value ="particapant.role">
+                        <option value="author">Автор</option>
+                        <option value="PC member">Рецензент</option>
+                        <option value="chair">Председатель ПК</option>
+                        <option value="administrator">Администратор</option>
+                    </select>
+                </td>
                 <td>{{particapant.lastSeen}}</td>
                 <td>{{particapant.wasInvitedBy}}</td>
             </tr> <!--ряд с ячейками тела таблицы-->
@@ -45,16 +73,6 @@ export default {
         }
     },
     methods:{
-        changeRole(role){
-            switch (role){
-                case 'administrator':
-                    return 'админ'
-                case 'author':
-                    return 'автор'
-                case 'PC member':
-                    return 'участник комиссии'
-            }
-        },
         sortBy(newOption){
             if(this.sortOption === newOption) {
                 this.sortOrder = this.sortOrder * -1;
@@ -149,5 +167,18 @@ td {
     /**Расширение таблицы*/
     width: 1%;
     white-space: nowrap;
+}
+.img{
+    width: 10px;
+    height:10px;
+}
+.upsidedown{
+    transform: rotate(180deg);
+}
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 </style>

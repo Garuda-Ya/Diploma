@@ -1,20 +1,20 @@
 <template>
-    <nav class = 'navbar' v-if = "$route.name != 'registration'&& $route.name != 'authorisation'">
-        <router-link to="/conference">
+    <nav class = 'navbar' v-if = "$route.name != 'registration'&& $route.name != 'authorisation' && this.$store.getters.getCurrentUserRole != 0">
+        <router-link to="/conference" v-show="this.$store.getters.getCurrentUserRole > 1">
             <div class = "navbar-first-item"><button>Конференция</button></div>
         </router-link>
-        <router-link to="/reviews">
+        <router-link to="/reviews" v-show="this.$store.getters.getCurrentUserRole > 1">
             <div class = "navbar-item"><button>Рецензии</button></div>
         </router-link>
         <router-link to="/articles">
-            <div class = "navbar-item"><button>Cтатьи</button></div>
+            <div class = "navbar-item"><button>Доклады</button></div>
         </router-link>
-        <router-link to="/particapants">
+        <router-link to="/particapants" v-show="this.$store.getters.getCurrentUserRole > 1">
             <div class = "navbar-item"><button>Участники</button></div>
         </router-link>
         <div class = "navbar-item">
             <router-link to="/faq">
-                <button>Справка</button>
+                <button>О конференции</button>
             </router-link>
         </div>
         <div class = "navbar-item" v-if="$store.state.isAuth==true">

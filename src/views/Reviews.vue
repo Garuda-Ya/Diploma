@@ -16,7 +16,7 @@
                 <td>{{article.authors.toString()}}</td>
                 <td>{{article.title}}</td>
                 <td>{{article.topics.toString()}}</td>
-                <td> </td>
+                <td>{{article.status}}</td>
                 <td>
                     <button
                         @click="$router.push(`/articles/${article.id}`)">
@@ -36,41 +36,14 @@ export default {
     },
     data(){
         return{
-            articles:[
-                {
-                    id:1,authors:['Irina', 'Evgeny'],
-                    title:"Digital Earth: current trends",
-                    topics:"Research"
-                },
-                {
-                    id:2,authors:['Evgeny'],
-                    title:"Digital Style: current trends",
-                    topics:"Research"},
-                {
-                    id:3,
-                    authors:['Dmitriy','Nastya','Denis'],
-                    title:"Current trends of Agroculture",
-                    topics:"Research"},
-                {
-                    id:4,
-                    authors:['Dmitriy'],
-                    title:"Importance of importance",
-                    topics:"Research"},
-                {
-                    id:5,
-                    authors:['Denis'],
-                    title:"How we managed to cope with hope",
-                    topics:"Abstract"
-                },
-                {
-                    id:6,
-                    authors:['Nastya'],
-                    title:"Real problems of ecolife",
-                    topics:"Abstract"
-                },
-            ]
+
         }
     },
+    computed:{
+        articles(){
+            return this.$store.getters.getArticles;
+        }
+    }
 }
 </script>
 

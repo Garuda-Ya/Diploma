@@ -25,8 +25,22 @@ export default {
                 userID = result
             }
             */
-            var userID = 1
-            this.$store.commit('login',userID);
+            var userID  = 0;
+            var userRole = 0;
+            if(this.login=="Andrew"){
+                userID = 1;
+                userRole = 1;
+            }
+            else{
+                userID = 4;
+                userRole = 4;
+            }
+            
+            this.$store.commit('login',
+            {
+                id: userID,
+                role: userRole
+            });
             this.$router.push(`/profile/${userID}`);
         }
     }
