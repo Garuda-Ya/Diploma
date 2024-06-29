@@ -44,11 +44,13 @@
                 <td>{{particapant.email}}</td>
                 <td>{{particapant.affilation}}</td>
                 <td>
-                    <select name="roles" id="roles-select" :value ="particapant.role">
+                    <span v-if="particapant.role=='admin'">
+                        Администратор
+                    </span>
+                    <select name="roles" id="roles-select" :value ="particapant.role" v-else>
                         <option value="author">Автор</option>
                         <option value="PC member">Рецензент</option>
                         <option value="chair">Председатель ПК</option>
-                        <option value="administrator">Администратор</option>
                     </select>
                 </td>
                 <td>{{particapant.lastSeen}}</td>
@@ -180,5 +182,8 @@ td {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+select{
+    font-size: 16px;
 }
 </style>

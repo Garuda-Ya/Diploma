@@ -11,6 +11,7 @@ import Profile from "@/views/Profile.vue";
 import Registration from "@/views/RegAndAuth/Registration.vue";
 import Reviews from "@/views/Reviews.vue";
 import SingleArticle from "@/views/Articles/SingleArticle.vue";
+import ConfSettings from "@/views/ConfSettings.vue";
 //#endregion
 import PageNotFound from "@/views/PageNotFound.vue";
 
@@ -66,6 +67,11 @@ const routes = [
         path:`/reviews`,
         name: 'reviews',
         component: Reviews,
+    },
+    {
+        path:`/confsettings`,
+        name: 'confsettings',
+        component: ConfSettings,
     },
     /*
     { 

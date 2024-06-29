@@ -11,7 +11,7 @@ export default createStore({
                 middleName:'Васильевич',
                 lastName:'Баранов',
                 email:'lohah_agixu92@yahoo.com',
-                role: 'administrator',
+                role: 'author',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
@@ -33,7 +33,7 @@ export default createStore({
                 middleName:'Степановна',
                 lastName:'Крупчатникова ',
                 email:'bavut-emine85@gmail.com',
-                role: 'administrator',
+                role: 'PC member',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
@@ -66,7 +66,7 @@ export default createStore({
                 middleName:'Васильевич',
                 lastName:'Баранов',
                 email:'heya-temisu27@yahoo.com',
-                role: 'administrator',
+                role: 'PC member',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
@@ -89,7 +89,7 @@ export default createStore({
                 lastName:'Валентанов',
                 email:'mek_emodene14@hotmail.com',
                 role: 'author',
-                affilation: 'БГТУ',
+                affilation: 'ВГДС',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '13'
             },
@@ -100,7 +100,7 @@ export default createStore({
                 lastName:'Хомяков',
                 email:'bavut-emine85@gmail.com',
                 role: 'PC member',
-                affilation: 'БГТУ',
+                affilation: 'ВГДС',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '31'
             },
@@ -110,7 +110,7 @@ export default createStore({
                 middleName:'Андреевич',
                 lastName:'Каштанов',
                 email:'morekav-owu21@mail.com',
-                role: 'administrator',
+                role: 'PC member',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '24'
@@ -122,7 +122,7 @@ export default createStore({
                 lastName:'Шеинов',
                 email:'hihero-rahe32@gmail.com',
                 role: 'PC member',
-                affilation: 'БГТУ',
+                affilation: 'ВГДС',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
             },
@@ -143,7 +143,7 @@ export default createStore({
                 middleName:'Станиславович',
                 lastName:'Устов',
                 email:'lohah_agixu92@yahoo.com',
-                role: 'administrator',
+                role: 'author',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
@@ -165,7 +165,7 @@ export default createStore({
                 middleName:'Денисович',
                 lastName:'Линдеман',
                 email:'bavut-emine85@gmail.com',
-                role: 'administrator',
+                role: 'chair',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '24'
@@ -176,7 +176,18 @@ export default createStore({
                 middleName:'Львович',
                 lastName:'Петров',
                 email:'morekav-owu21@mail.com',
-                role: 'administrator',
+                role: 'chair',
+                affilation: 'БГТУ',
+                lastSeen: '08.07.2023 12:33',
+                wasInvitedBy: '0'
+            },
+            {
+                id:25,
+                firstName:'Алексей',
+                middleName:'Александрович',
+                lastName:'Флусов',
+                email:'flusov-bsty24@gmail.com',
+                role: 'admin',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '0'
@@ -187,8 +198,8 @@ export default createStore({
                 middleName:'Михайлович',
                 lastName:'Беркутов',
                 email:'hihero-rahe32@gmail.com',
-                role: 'administrator',
-                affilation: 'БГТУ',
+                role: 'author',
+                affilation: 'МГУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '0'
             },
@@ -220,7 +231,7 @@ export default createStore({
                 middleName:'Андреевич',
                 lastName:'Шеинов',
                 email:'mek_emodene14@hotmail.com',
-                role: 'PC member',
+                role: 'chair',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
@@ -242,8 +253,8 @@ export default createStore({
                 middleName:'Иванович',
                 lastName:'Иванов',
                 email:'morekav-owu21@mail.com',
-                role: 'administrator',
-                affilation: 'БГТУ',
+                role: 'chair',
+                affilation: 'СТРМ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
             },
@@ -253,7 +264,7 @@ export default createStore({
                 middleName:'Вадимович',
                 lastName:'Гучков',
                 email:'hihero-rahe32@gmail.com',
-                role: 'administrator',
+                role: 'chair',
                 affilation: 'БГТУ',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '2'
@@ -265,14 +276,14 @@ export default createStore({
                 lastName:'Нарышникова',
                 email:'heya-temisu27@yahoo.com',
                 role: 'PC member',
-                affilation: 'БГТУ',
+                affilation: 'ВГДС',
                 lastSeen: '08.07.2023 12:33',
                 wasInvitedBy: '21'
             },
         ],
         articles:[
             {
-                id:1,authors:['Irina', 'Evgeny'],
+                id:1,authors:['Irina'],
                 title:"Digital Earth: current trends",
                 topics:"Research",
                 status:"В проверке"
@@ -285,7 +296,7 @@ export default createStore({
             },
             {
                 id:3,
-                authors:['Dmitriy','Nastya','Denis'],
+                authors:['Nastya'],
                 title:"Current trends of Agroculture",
                 topics:"Research",
                 status:"В проверке"
